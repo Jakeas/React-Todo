@@ -8,7 +8,7 @@ class TodoForm extends React.Component {
         }
     }
     handleChanges = e => {
-        this.setState ({ [e.target.task]: e.target.value})
+        this.setState ({ [e.target.name]: e.target.value})
     }
 
     submitTodo = e => {
@@ -18,7 +18,7 @@ class TodoForm extends React.Component {
     }
 
     render() {
-        console.log('rendering form');
+        // console.log('rendering form');
         return (
             <form onSubmit={this.submitTodo}>
                 <input 

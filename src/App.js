@@ -1,6 +1,7 @@
 import React from 'react';
 import TodoForm from './components/TodoForm'
 import TodoList from './components/TodoList'
+import Todo from './components/Todo.css'
 
 const todos = [
   {
@@ -40,7 +41,7 @@ class App extends React.Component {
     e.preventDefault();
     const newTodo={
       task: todo,
-      id: this.state.id,
+      id: Date.now(),
       completed: false
     }
     this.setState({
@@ -75,7 +76,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="header">
-        <h1>Welcome to your Todo App!</h1>
+        <h1>What Todo?</h1>
         <TodoForm key={this.id} addTodo={this.addTodo}/> 
         </div>
         <TodoList 
